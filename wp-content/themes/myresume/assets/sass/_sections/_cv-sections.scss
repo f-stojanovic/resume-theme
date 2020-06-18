@@ -1,0 +1,438 @@
+/*------------------------------------------------------------------------------
+                               CV SECTIONS
+-------------------------------------------------------------------------------*/
+@import "../_vendors/bootstrap-sass/assets/stylesheets/bootstrap/mixins/grid";
+@import "../_vendors/bootstrap-sass/assets/stylesheets/bootstrap/mixins/image";
+@import "../_vendors/bootstrap-sass/assets/stylesheets/bootstrap/mixins/clearfix";
+@import "../_abstracts/variables";
+
+/*-----------------------------------------------------------------------------
+                               CV INTRODUCTION SECTION
+------------------------------------------------------------------------------*/
+.introduction-section {
+  .text-content {
+    color: $font-color;
+    text-align: center;
+    padding: 30px;
+    border: 1px solid $border-light;
+    background: $content-bg;
+    margin: 0 auto 30px auto;
+  }
+}
+
+/*-----------------------------------------------------------------------------
+                               CV SKILLS SECTION
+------------------------------------------------------------------------------*/
+.skills-section {
+  .skills-block {
+    color: $font-color;
+    .skills {
+      padding: 30px 30px 40px;
+      border: 1px solid $border-light;
+      background: $content-bg;
+      margin: 0 auto 30px auto;
+      h6 {
+        text-align: center;
+        color: $font-color;
+      }
+      .skills-info {
+        margin-bottom: 5px;
+        margin-top: 5px;
+        .title {
+          width: 85%;
+          display: inline-table;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          font-size: 11px;
+          font-weight: bold;
+        }
+        .value {
+          font-size: 12px;
+
+          //directional css
+          @if ($Direction == 'rtl') {
+            float: left;
+          } @else {
+            float: right;
+          }
+
+        }
+      }
+      .skills-bar {
+        height: 3px;
+        background: $font-color;
+        position: relative;
+        width: 0;
+      }
+      .skills-bar-bg {
+        height: 3px;
+        background: $font-color;
+        opacity: .1;
+        width: 100%;
+        margin-top: -3px;
+      }
+    }
+  }
+}
+
+/*-----------------------------------------------------------------------------
+                                CV EDUCATION SECTION
+------------------------------------------------------------------------------*/
+.education-section {
+  .text-content {
+    padding: 30px;
+    border: 1px solid $border-light;
+    margin: 0 auto 30px auto;
+    background: $content-bg;
+    text-align: center;
+    h6 {
+      border: 1px solid $border-light;
+      display: table;
+      padding: 15px;
+      margin: 10px auto;
+    }
+    p {
+      color: $font-color;
+    }
+  }
+}
+
+/*-----------------------------------------------------------------------------
+                                CV EXPERIENCE SECTION
+------------------------------------------------------------------------------*/
+.experience-section {
+  .text-content {
+    padding: 30px;
+    border: 1px solid $border-light;
+    background: $content-bg;
+    margin: 0 auto 30px auto;
+    text-align: center;
+    h6 {
+      border: 1px solid $border-light;
+      display: table;
+      padding: 15px;
+      margin: 10px auto;
+    }
+    p {
+      color: $font-color;
+    }
+  }
+}
+
+/*-----------------------------------------------------------------------------
+                                CV TESTIMONIALS SECTION
+------------------------------------------------------------------------------*/
+.testimonials-section {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  .text-content {
+    padding: 30px;
+    box-shadow: $box-shadow-light;
+    background: $content-bg;
+    margin: auto;
+    color: $dark-color;
+    text-align: center;
+    background: transparentize($white-color, .6);
+    i {
+      font-size: 40px;
+      color: $accent-color;
+      margin-bottom: -10px;
+    }
+    blockquote {
+      border: 0;
+      text-align: center;
+      margin: 0 0 10px;
+    }
+    .quote-info {
+      text-align: center;
+      margin-bottom: 15px;
+      h6 {
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+/*-----------------------------------------------------------------------------
+                                CV CLIENTS SECTION
+------------------------------------------------------------------------------*/
+.clients-section {
+  margin: 0 auto 30px auto;
+  .clients-block {
+    .logo {
+      text-align: center;
+      padding: 40px;
+      border: 1px solid $border-light;
+      background: $content-bg;
+      transition: all .5s;
+      &:hover {
+        background: transparentize($accent-color, .3);
+      }
+      img {
+        @include img-responsive();
+      }
+      a {
+        &:hover {
+          background: transparent;
+        }
+      }
+    }
+  }
+}
+
+/*-----------------------------------------------------------------------------
+                                CV INTEREST SECTION
+------------------------------------------------------------------------------*/
+.interest-section {
+  padding: 30px;
+  border: 1px solid $border-light;
+  background: $content-bg;
+  margin: 0 auto 30px auto;
+  .interest-block {
+    text-align: center;
+    .text-content {
+      padding-bottom: 15px;
+    }
+    .interest {
+      text-align: center;
+      padding: 10px;
+      border: 1px solid $border-light;
+      i {
+        color: $font-color;
+        font-size: 35px;
+        text-align: center;
+      }
+      span {
+        display: block;
+        text-align: center;
+        margin: 5px;
+      }
+    }
+  }
+}
+
+/*-----------------------------------------------------------------------------
+                                CV BLOG SECTION
+------------------------------------------------------------------------------*/
+.blog-section {
+  .blog-block {
+    .blog {
+      border: 1px solid $border-light;
+      margin: 0 auto 30px auto;
+      overflow: hidden;
+      .preview-image {
+        background: $accent-color;
+        position: relative;
+        img {
+          @include img-responsive();
+          transition: all .8s;
+        }
+        .caption-and-link {
+          position: absolute;
+          display: none;
+          transition: all .5s;
+          justify-content: center;
+          align-items: flex-start;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          padding: 10px;
+          .caption {
+            color: $white-color;
+            padding: 10px;
+            h6 {
+              text-transform: uppercase;
+              margin-bottom: -5px;
+              font-weight: 500;
+            }
+          }
+          .links {
+            padding: 10px;
+            a {
+              justify-content: center;
+              align-items: center;
+              color: $white-color;
+              text-transform: uppercase;
+              padding: 7px;
+              font-size: 11px;
+              border: 1px solid $border-light;
+              transition: all .5s;
+              margin: 2px;
+              &:hover {
+                background: transparent;
+                box-shadow: $border-inset;
+              }
+            }
+          }
+        }
+        &:hover {
+          img {
+            opacity: .1;
+            -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+          }
+          .caption-and-link {
+            display: flex;
+            .links a {
+              display: inline-flex;
+            }
+          }
+        }
+      }
+
+      .text-content {
+        padding: 15px;
+        background: $content-bg;
+        z-index: 4;
+        position: relative;
+
+        //directional css
+        @if ($Direction == 'rtl') {
+          text-align: right;
+        } @else {
+          text-align: left;
+        }
+
+        h6 {
+          border-bottom: 1px solid $border-light;
+          padding-bottom: 10px;
+          margin-bottom: 15px;
+        }
+      }
+    }
+    @media screen and (max-width: 991px) {
+      .blog {
+        text-align: center;
+        max-width: 400px;
+      }
+    }
+  }
+}
+
+/*-----------------------------------------------------------------------------
+                               CV CONTACT SECTION
+------------------------------------------------------------------------------*/
+.contact-section {
+  .finding-details {
+    .text-content {
+      padding: 30px;
+      border: 1px solid $border-light;
+      background: $content-bg;
+      margin: 0 auto 30px auto;
+      h6 {
+        text-transform: uppercase;
+      }
+    }
+    @media screen and (max-width: 991px) {
+      .text-content {
+        //max-width: 400px;
+        text-align: center;
+      }
+    }
+    .map {
+      height: 133px;
+      margin-top: 48px;
+    }
+    @media screen and (max-width: 991px) {
+      .map {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .contact-form {
+    .form-horizontal {
+      padding: 30px;
+      margin: 0 auto 30px auto;
+      border: 1px solid $border-light;
+      background: $content-bg;
+      input, textarea {
+        background: $body-color;
+      }
+    }
+    @media screen and (max-width: 991px) {
+      .form-horizontal {
+        text-align: center;
+        .form-control {
+          text-align: center;
+        }
+      }
+    }
+
+    .g-recaptcha {
+      margin-bottom: 12px;
+      iframe {
+      }
+      @media screen and (max-width: 575px) {
+        iframe {
+          transform: scale(0.77);
+          -webkit-transform: scale(0.77);
+          transform-origin: 0 0;
+          -webkit-transform-origin: 0 0;
+          margin-right: -24%;
+        }
+      }
+    }
+    @media screen and (min-width: 575px) and (max-width: 991px) {
+      .g-recaptcha {
+        justify-content: center;
+        display: flex;
+        margin: auto auto 12px;
+      }
+    }
+    @media screen and (max-width: 575px) {
+      .g-recaptcha {
+        margin-bottom: -4px;
+        justify-content: center;
+        display: flex;
+        margin-right: 1px;
+      }
+    }
+
+    .btn {
+      display: inline-flex;
+      margin-top: 0;
+      padding: 10px 25px;
+      background: $accent-color;
+      color: $white-color;
+      &:hover {
+        box-shadow: $box-shadow-light;
+        background: darken($accent-color, 5%);
+      }
+    }
+    @media screen and (max-width: 991px) {
+      .btn {
+        margin-bottom: 15px;
+      }
+    }
+    .message {
+      padding: 8px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      top: 1px;
+      margin: 0;
+      border: 1px solid $border-light;
+
+      //directional css
+      @if ($Direction == 'rtl') {
+        right: 10px;
+      } @else {
+        left: 10px;
+      }
+
+    }
+    @media screen and (max-width: 991px) {
+      .message {
+        top: -7px;
+        //directional css
+        @if ($Direction == 'rtl') {
+          right: 0;
+        } @else {
+          left: 0;
+        }
+      }
+    }
+  }
+}

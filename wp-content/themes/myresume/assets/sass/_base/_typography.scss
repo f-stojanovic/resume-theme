@@ -1,0 +1,67 @@
+/*-----------------------------------------------------------------------------
+                              TYPOGRAPHY
+------------------------------------------------------------------------------*/
+@import "../_abstracts/variables";
+@import "../_abstracts/theme-mixins";
+@import "../_abstracts/functions";
+
+p, blockquote, span, a, li, .tooltip, input {
+  line-height: 1.5;
+  font-size: 14px;
+  font-style: normal;
+  letter-spacing: .9px;
+  font-family: 'Advent Pro', sans-serif;
+}
+
+h6, p {
+  font-family: 'Advent Pro', sans-serif;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+}
+
+h6 {
+  font-weight: bold;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Advent Pro', sans-serif;
+  text-transform: uppercase;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+//TYPOGRAPHY SCALE
+$h1-font-size: (null: 80, $md: 75, $sm: 65, $xs: 50);
+$h2-font-size: (null: 52, $md: 45, $sm: 35, $xs: 30);
+$h3-font-size: (null: 42, $md: 40, $sm: 30, $xs: 25);
+$h4-font-size: (null: 24, $md: 23, $sm: 21, $xs: 20);
+$h5-font-size: (null: 16, $md: 16, $sm: 16, $xs: 16);
+$h6-font-size: (null: 15, $md: 15, $sm: 15, $xs: 15);
+
+h1 {
+  @include font-size-map($h1-font-size);
+}
+
+h2 {
+  @include font-size-map($h2-font-size);
+}
+
+h3 {
+  @include font-size-map($h3-font-size);
+}
+
+h4 {
+  @include font-size-map($h4-font-size);
+}
+
+h5 {
+  @include font-size-map($h5-font-size);
+}
+
+h6 {
+  @include font-size-map($h6-font-size);
+}

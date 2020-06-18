@@ -1,0 +1,101 @@
+@import "../_vendors/bootstrap-sass/assets/stylesheets/bootstrap/mixins/grid";
+@import "../_vendors/bootstrap-sass/assets/stylesheets/bootstrap/mixins/image";
+@import "../_vendors/bootstrap-sass/assets/stylesheets/bootstrap/mixins/clearfix";
+@import "../_abstracts/variables";
+
+/*-----------------------------------------------------------------------------
+                                 NAVBAR
+------------------------------------------------------------------------------*/
+
+.navbar {
+  border-bottom: 0;
+  text-transform: uppercase;
+  padding: 4px 0;
+  -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+  -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+  transition: background .5s ease-in-out, padding .5s ease-in-out;
+  background: $nav-bg;
+  box-shadow: $box-shadow-light;
+  .container {
+    .navbar-header {
+      .navbar-toggle {
+        border-radius: 0;
+        padding: 9px 9px;
+      }
+
+      .navbar-brand {
+        font-size: 14px;
+        margin-top: 2px;
+        font-weight: bold;
+      }
+    }
+    .nav {
+      a {
+        font-size: 13px;
+        margin-bottom: 12px;
+        margin-top: 12px;
+        font-weight: 500;
+        border: 1px solid $border-light;
+      }
+    }
+  }
+  @media (min-width: 768px) {
+    .navbar-nav > li > a {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
+}
+
+.top-nav-collapse {
+  padding: 0;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: $font-color-dark;
+  background-color: $nav-active;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: $font-color-dark;
+  background-color: $nav-active;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  background-color: $nav-active;
+  color: $font-color-dark;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: $nav-active;
+}
+
+.dropdown-menu {
+  background: $nav-bg;
+  border-radius: 0;
+  li {
+    a {
+      border: 0 !important;
+    }
+  }
+}
+
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+  color: $font-color-dark;
+  text-decoration: none;
+  outline: 0;
+  background-color: $nav-active;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+  text-decoration: none;
+  color: $font-color-dark;
+  background-color: $nav-active;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: $font-color-dark;
+    background-color: $nav-active;
+  }
+}

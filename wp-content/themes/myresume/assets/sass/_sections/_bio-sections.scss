@@ -1,0 +1,166 @@
+/*------------------------------------------------------------------------------
+                                BIO SECTIONS
+-------------------------------------------------------------------------------*/
+@import "../_vendors/bootstrap-sass/assets/stylesheets/bootstrap/mixins/grid";
+@import "../_vendors/bootstrap-sass/assets/stylesheets/bootstrap/mixins/image";
+@import "../_vendors/bootstrap-sass/assets/stylesheets/bootstrap/mixins/clearfix";
+@import "../_abstracts/variables";
+
+/*-----------------------------------------------------------------------------
+                                BIO STORY SECTION
+------------------------------------------------------------------------------*/
+.story-section {
+  .text-content {
+    color: $font-color;
+    text-align: center;
+    padding: 30px;
+    border: 1px solid $border-light;
+    background: $content-bg;
+    margin-bottom: 30px;
+  }
+}
+
+/*-----------------------------------------------------------------------------
+                                BIO DETAILS SECTION
+------------------------------------------------------------------------------*/
+.details-section {
+  .text-content {
+    padding: 30px;
+    border: 1px solid $border-light;
+    background: $content-bg;
+    margin: 0 auto 30px auto;
+    p {
+      color: $font-color;
+      font-weight: bold;
+      i {
+        font-size: 20px;
+        position: relative;
+        top: 2px;
+      }
+      span {
+        padding: 7px;
+        border: 1px solid $border-light;
+        font-weight: normal;
+        line-height: 2.5;
+      }
+    }
+  }
+}
+
+/*-----------------------------------------------------------------------------
+                                BIO EVENTS SECTION
+------------------------------------------------------------------------------*/
+.event-section {
+  .events-block {
+    margin-bottom: 30px;
+    .text-content {
+      padding: 30px;
+      border: 1px solid $border-light;
+      background: $content-bg;
+      margin: auto;
+      text-align: center;
+      h6 {
+        border: 1px solid $border-light;
+        display: table;
+        padding: 15px;
+        margin: 10px auto;
+      }
+    }
+  }
+  .image-block {
+    @include clearfix();
+    margin: 0 15px 30px;
+    .events-image {
+      margin: auto;
+      overflow: hidden;
+      box-shadow: $box-shadow-light;
+      background: transparentize($accent-color, .1);
+      padding: 0;
+      img {
+        @include img-responsive();
+        opacity: 1;
+        transition: all .8s;
+        transform: scale(1);
+        border-radius: .01px;
+      }
+      .links {
+        position: absolute;
+        display: none;
+        transition: all .5s;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        a {
+          justify-content: center;
+          align-items: center;
+          color: $white-color;
+          text-transform: uppercase;
+          transition: all .5s;
+          padding: 7px;
+          font-size: 11px;
+          border: 1px solid $border-light;
+          &:hover {
+            background: transparent;
+            box-shadow: $border-inset;
+          }
+        }
+      }
+      &:hover {
+        .links {
+          display: flex;
+        }
+        img {
+          opacity: .1;
+          transform: scale(1.1);
+        }
+      }
+    }
+    @media screen and (max-width: 991px) {
+      .events-image {
+        max-width: 400px;
+      }
+    }
+  }
+}
+
+/*-----------------------------------------------------------------------------
+                                BIO ACHIEVEMENTS SECTION
+------------------------------------------------------------------------------*/
+.achievements-section {
+  .achievements-block {
+    .text-content {
+      padding: 30px;
+      border: 1px solid $border-light;
+      background: $content-bg;
+      margin: 0 auto 30px auto;
+      .header {
+        display: flex;
+        .date {
+          border: 1px solid $border-light;
+          padding: 15px;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          span {
+            display: block;
+          }
+        }
+        .heading {
+          border: 1px solid $border-light;
+          padding: 15px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          span {
+            display: block;
+            font-weight: normal;
+          }
+        }
+      }
+    }
+  }
+}

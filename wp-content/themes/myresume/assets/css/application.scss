@@ -1,0 +1,37 @@
+/*------------------------------------------------------------------------------
+                           APPLICATION MAIN STYLESHEET
+ -------------------------------------------------------------------------------*/
+// BASE
+@import "../sass/_base/toc";
+@import "../sass/_base/body";
+@import "../sass/_base/typography";
+@import "../sass/_base/utilities";
+
+
+// COMPONENTS
+@import "../sass/_components/pre-loader";
+@import "../sass/_components/section-heading";
+@import "../sass/_components/popup";
+@import "../sass/_components/animations";
+@import "../sass/_components/scroll-top";
+@import "../sass/_components/masonry";
+@import "../sass/_components/buttons";
+@import "../sass/_components/pagination";
+@import "../sass/_components/modal";
+@import "../sass/_components/slider";
+@import "../sass/_components/form";
+
+
+// LAYOUTS
+@import "../sass/_layout/nav";
+@import "../sass/_layout/header";
+@import "../sass/_layout/footer";
+
+
+// SECTIONS
+@import "../sass/_sections/bio-sections";
+@import "../sass/_sections/portfolio-sections";
+@import "../sass/_sections/cv-sections";
+@import "../sass/_sections/blog-sections";
+
+

@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  resume_php:
+      container_name: resume_php
+      build: ./scripts/provision/docker/php/
+      image: php:7.1.21-apache-stretch
+      depends_on:
+        - "resume_mysql"
+      ports:
+          - 8080:80
+      volumes:
+          - .:/var/www/html:cached
+  resume_mysql:
+      container_name: resume_mysql
+      image: mysql:5.7
+      volumes:
+          - ./scripts/provision/docker/mysql/data:/var/lib/mysql:cached
+          - .:/var/www/html:cached
+      ports:
+          - 33082:3306
+      environment:
+         MYSQL_ROOT_PASSWORD: resume
+         MYSQL_DATABASE: resume
+         MYSQL_USER: resume
+         MYSQL_PASSWORD: resume

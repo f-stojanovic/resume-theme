@@ -1,0 +1,41 @@
+@import "../_abstracts/variables";
+
+/*-----------------------------------------------------------------------------
+                                   FORM
+------------------------------------------------------------------------------*/
+.form-group, .form-inline {
+  .form-control {
+    background: transparent;
+    resize: none;
+    border-radius: 0;
+    height: auto;
+    color: $font-color;
+    text-transform: capitalize;
+    border: 1px solid $border-light;
+    box-shadow: none;
+    transition: all .9s;
+    padding: 10px;
+    &:focus {
+      border-color: darken($border-light, 10%);
+      outline: 0;
+      box-shadow: none;
+    }
+  }
+  ::-webkit-input-placeholder {
+    color: $font-color;
+  }
+
+  ::-moz-placeholder {
+    color: $font-color;
+  }
+
+  :-ms-input-placeholder {
+    color: $font-color;
+  }
+}
+
+.form-group {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

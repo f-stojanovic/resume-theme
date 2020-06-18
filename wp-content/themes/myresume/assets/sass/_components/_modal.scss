@@ -1,0 +1,105 @@
+/*-----------------------------------------------------------------------------
+                                   MODAL
+-----------------------------------------------------------------------------*/
+@import "../_vendors/bootstrap-sass/assets/stylesheets/bootstrap/mixins/image";
+@import "../_vendors/bootstrap-sass/assets/stylesheets/bootstrap/mixins/clearfix";
+@import "../_abstracts/variables";
+@import "../_abstracts/theme-mixins";
+
+.details-modal {
+  width: 86%;
+  position: relative;
+  margin: 15px auto;
+  .modal-content {
+    @include clearfix;
+    display: flex;
+    box-shadow: $box-shadow-light;
+    background: $primary-color;
+    border-radius: 0;
+    border: 0;
+    .item-image {
+      padding: 0;
+      img {
+        @include img-responsive();
+      }
+    }
+    .item-description {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .text-content {
+        color: $font-color-dark;
+        padding: 20px 15px;
+
+        //directional css
+        @if ($Direction == 'rtl') {
+          text-align: right;
+        } @else {
+          text-align: left;
+        }
+        .info-list {
+          strong {
+            text-transform: uppercase;
+          }
+        }
+        .live-link {
+          text-transform: uppercase;
+          font-size: 14px;
+          color: $font-color;
+          display: table;
+          margin-top: 8px;
+          background: transparent;
+          transition: all .7s;
+          border: 2px solid rgba(220, 216, 216, 0.42);
+          padding: 8px 19px;
+          i {
+            font-size: 23px;
+            padding: 0 2px;
+          }
+          &:hover, &:focus {
+            background: $hover-bg;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 991px) {
+    .modal-content {
+      display: block;
+    }
+  }
+  .mfp-close {
+    cursor: pointer;
+    position: absolute;
+    width: 36px;
+    color: $font-color-dark;
+    line-height: 0;
+    box-shadow: $box-shadow-light;
+    border: 1px solid transparentize($white-color, .4);
+    margin: 6px;
+    display: block;
+    transition: all .7s;
+    padding: 2px 0 0;
+    height: 36px;
+    text-align: center;
+    top: 0;
+
+    //directional css
+    @if ($Direction == 'rtl') {
+      left: 0;
+    } @else {
+      right: 0;
+    }
+
+    &:hover {
+      background: $hover-bg;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .details-modal {
+    display: block;
+    width: 100%;
+  }
+}

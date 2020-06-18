@@ -1,0 +1,51 @@
+@import "../_abstracts/variables";
+@import "../_abstracts/theme-mixins";
+
+/*-----------------------------------------------------------------------------
+                                BUTTONS
+------------------------------------------------------------------------------*/
+.btn {
+  padding: 12px;
+  color: $font-color;
+  outline: 0;
+  text-transform: uppercase;
+  background: transparent;
+  border: 1px solid $border-light;
+  transition: box-shadow .8s;
+  border-radius: 0;
+  &:hover, &:focus {
+    outline: 0;
+    background: $hover-bg;
+    color: $font-color-dark;
+  }
+  &:active {
+    outline: 0;
+    background: $hover-bg;
+  }
+
+}
+
+.btn.active {
+  outline: 0 !important;
+  background: $hover-bg;
+  box-shadow: none;
+  &:focus, &:active {
+    outline: 0;
+  }
+}
+
+button {
+  outline: 0;
+  border: 0;
+}
+
+.btn-progress {
+  background: $accent-color !important;
+  @include background-strip;
+  color: $font-color-dark;
+  background-size: 40px 40px !important;
+  -webkit-animation: progress-bar-stripes 2s linear infinite;
+  -o-animation: progress-bar-stripes 2s linear infinite;
+  animation: progress-bar-stripes 2s linear infinite;
+  opacity: 1 !important;
+}

@@ -1,0 +1,54 @@
+@import "../_abstracts/variables";
+@import "../_abstracts/theme-mixins";
+@import "../_abstracts/functions";
+
+/*-----------------------------------------------------------------------------
+                                PRE-LOADER
+------------------------------------------------------------------------------*/
+.loading {
+  background-color: $preloader-bg;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 4000;
+
+  .loading-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    h5 {
+      font-size: 15px;
+      letter-spacing: 1px;
+    }
+
+  }
+}
+
+.ripple-loader {
+  width: 49px;
+  height: 49px;
+  border-radius: 50%;
+  background: $font-color;
+  animation: 1.15s infinite ease-in-out;
+  -webkit-animation: 1.15s infinite ease-in-out;
+  -moz-animation: 1.15s infinite ease-in-out;
+  &:before, &:after {
+    animation: 1.15s infinite ease-in-out;
+    -webkit-animation: 1.15s infinite ease-in-out;
+    -moz-animation: 1.15s infinite ease-in-out;
+  }
+  &:before, &:after {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  animation-name: ripple;
+  -webkit-animation-name: ripple;
+  -moz-animation-name: ripple;
+}

@@ -1,0 +1,43 @@
+@import "../_vendors/bootstrap-sass/assets/stylesheets/bootstrap/mixins/grid";
+@import "../_vendors/bootstrap-sass/assets/stylesheets/bootstrap/mixins/image";
+@import "../_vendors/bootstrap-sass/assets/stylesheets/bootstrap/mixins/clearfix";
+@import "../_abstracts/variables";
+
+/*-----------------------------------------------------------------------------
+                                 HEADER SECTION
+------------------------------------------------------------------------------*/
+
+header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 40px;
+  .text-content {
+    color: $dark-color;
+    background: transparentize($white-color, .7);
+    padding: 50px;
+    display: table;
+    box-shadow: $box-shadow-light;
+
+    //directional css
+    @if ($Direction == 'rtl') {
+      text-align: right;
+    } @else {
+      text-align: left;
+    }
+    p {
+      font-weight: 500;
+    }
+
+    h3, p, h6 {
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+  }
+  @media screen and (max-width: 991px) {
+    .text-content {
+      text-align: center;
+      margin: auto;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+@import "../_vendors/bootstrap-sass/assets/stylesheets/bootstrap/mixins/grid";
+@import "../_vendors/bootstrap-sass/assets/stylesheets/bootstrap/mixins/image";
+@import "../_vendors/bootstrap-sass/assets/stylesheets/bootstrap/mixins/clearfix";
+@import "../_abstracts/variables";
+
+/*-----------------------------------------------------------------------------
+                              BODY & SECTION
+------------------------------------------------------------------------------*/
+
+html, body {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  width: 100%; //needed for ie full screen
+  height: 100%; //needed for ie full screen
+  display: block;
+  font-family: 'Advent Pro', sans-serif;
+  font-size: 15px;
+  color: $font-color;
+  letter-spacing: .9px;
+
+  //directional css
+  @if ($Direction == 'rtl') {
+    direction: rtl;
+    unicode-bidi: embed;
+  } @else {
+    direction: ltr;
+  }
+
+  -webkit-overflow-scrolling: touch;
+  background-color: $body-color;
+
+  a {
+    color: $font-color;
+    font-weight: 500;
+    &:hover, &:focus {
+      text-decoration: none;
+      color: $font-color;
+      //background-color: $hover-bg;
+    }
+  }
+
+  img {
+    margin: 0 auto;
+  }
+  i, .icon {
+    display: inline-block;
+  }
+  section, .section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid $border-light;
+  }
+}

@@ -1,0 +1,138 @@
+/*------------------------------------------------------------------------------
+                               PORTFOLIOS SECTIONS
+-------------------------------------------------------------------------------*/
+@import "../_vendors/bootstrap-sass/assets/stylesheets/bootstrap/mixins/grid";
+@import "../_vendors/bootstrap-sass/assets/stylesheets/bootstrap/mixins/image";
+@import "../_vendors/bootstrap-sass/assets/stylesheets/bootstrap/mixins/clearfix";
+@import "../_abstracts/variables";
+
+/*-----------------------------------------------------------------------------
+                              PORTFOLIO GALLERY SECTION
+------------------------------------------------------------------------------*/
+.gallery-section {
+  margin-bottom: 15px;
+}
+
+/*-----------------------------------------------------------------------------
+                           PORTFOLIO BEST-SHOTS SECTION
+------------------------------------------------------------------------------*/
+.best-shots-section {
+  .shots-block {
+    .shots {
+      border: 1px solid $border-light;
+      margin: 0 auto 30px auto;
+      overflow: hidden;
+      .preview-image {
+        background: $accent-color;
+        position: relative;
+        img {
+          @include img-responsive();
+          transition: all .8s;
+        }
+        .caption-and-link {
+          position: absolute;
+          display: none;
+          transition: all .5s;
+          justify-content: center;
+          align-items: flex-start;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          padding: 10px;
+          .caption {
+            color: $white-color;
+            padding: 10px;
+            h6 {
+              text-transform: uppercase;
+              margin-bottom: -5px;
+              font-weight: 500;
+              font-size: 15px;
+            }
+          }
+          .links {
+            padding: 10px;
+            a {
+              justify-content: center;
+              align-items: center;
+              color: $white-color;
+              text-transform: uppercase;
+              padding: 7px;
+              font-size: 11px;
+              border: 1px solid $border-light;
+              transition: all .5s;
+              margin: 2px;
+              &:hover {
+                background: transparent;
+                box-shadow: $border-inset;
+              }
+            }
+          }
+        }
+        &:hover {
+          img {
+            opacity: .1;
+            -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+          }
+          .caption-and-link {
+            display: flex;
+            .links a {
+              display: inline-flex;
+            }
+          }
+        }
+      }
+
+      .text-content {
+        padding: 15px;
+        text-align: center;
+        background: $content-bg;
+        z-index: 4;
+        position: relative;
+        h6 {
+          border: 1px solid $border-light;
+          display: table;
+          padding: 15px;
+          margin: 10px auto;
+        }
+      }
+    }
+    @media screen and (max-width: 991px) {
+      .shots {
+        text-align: center;
+        max-width: 400px;
+      }
+    }
+  }
+}
+
+/*-----------------------------------------------------------------------------
+                                 HIRE SECTION
+------------------------------------------------------------------------------*/
+.hire-section {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  .text-content {
+    padding: 30px;
+    border: 1px solid $border-light;
+    background: $primary-color;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h5 {
+      margin: 5px;
+    }
+    .btn {
+      background: $accent-color;
+      color: $white-color;
+      margin: 5px;
+      &:hover {
+        box-shadow: $box-shadow-light;
+        background: darken($accent-color, 5%);
+      }
+    }
+  }
+}
+
+

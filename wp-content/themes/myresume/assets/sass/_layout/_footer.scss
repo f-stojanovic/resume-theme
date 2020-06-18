@@ -1,0 +1,44 @@
+@import "../_abstracts/variables";
+
+/*-----------------------------------------------------------------------------
+                                 FOOTER
+------------------------------------------------------------------------------*/
+
+footer {
+  text-align: center;
+  background: $primary-color;
+  //directional css
+  @if ($Direction == 'rtl') {
+    text-align: right;
+  } @else {
+    text-align: left;
+  }
+
+  h5 {
+    border-bottom: 1px solid darken($border-light, 5%);
+    display: table;
+    padding-bottom: 5px;
+    font-size: 15px;
+  }
+  @media screen and (max-width: 991px) {
+    h5 {
+      margin: 10px auto;
+    }
+  }
+
+  .footer-infos {
+
+  }
+  .footer-socials {
+    p {
+      clear: both;
+      margin-top: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  footer {
+    text-align: center;
+  }
+}

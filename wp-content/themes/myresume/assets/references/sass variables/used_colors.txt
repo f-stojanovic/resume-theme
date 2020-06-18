@@ -1,0 +1,6 @@
+RED : #f44336;
+GREEN : #2ecc71;
+BLUE : #3498db;
+PURPLE : #9b59b6;
+ORANGE : #FF5722;
+PINK : #E91E63;

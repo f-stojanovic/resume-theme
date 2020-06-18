@@ -1,0 +1,54 @@
+.sass-cache
+
+bower_components
+
+atlassian-domain-verification.html
+
+node_modules
+
+understrap.zip
+
+#dist
+
+#dist-product
+
+npm-debug.log
+
+/vendor/
+
+.DS_Store
+
+Thumbs.db
+
+.svn
+
+.cvs
+
+*.bak
+
+*.swp
+.idea/
+
+# from net
+wp-config.php
+wp-content/uploads
+#wp-content/plugins
+wp-content/cache
+wp-content ... # Everything that is created by users
+.htaccess
+
+# sass
+# wp-content/themes/pannovate/css/theme.css
+# wp-content/themes/pannovate/css/theme.min.css
+# wp-content/themes/pannovate/css/theme.min.css.map
+# wp-content/themes/pannovate/css/theme.css/theme.min.css
+# wp-content/themes/pannovate/css/theme.css/theme.min.css.map
+
+# plugins
+wp-content/ai1wm-backups/
+#wp-content/plugins/all-in-one-wp-migration/
+
+*.log
+
+wp-content/plugins/bwp-minify/cache/*
+wp-content/wflogs

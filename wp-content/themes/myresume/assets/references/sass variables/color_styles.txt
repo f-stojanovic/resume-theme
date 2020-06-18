@@ -1,0 +1,68 @@
+// VARIABLES //                             // PROPERTIES //                                        // DETAILS //
+
+//ROOT PATH FOR LINKING IMAGES
+$rootPath:                                   "..";                                           //root path to link images in sass
+
+
+//THEME DIRECTION
+$Direction:                                  'ltr';                                          //theme base direction ltr/rtl
+
+
+//BODY FONT SIZE
+$browser-context:                            14;                                             //used for px to em conversion
+
+
+//BASE COLORS
+$primary-color:                              darken(#fff, .99%);                             //theme primary color
+$secondary-color:                            #000000;                                        //theme secondary color
+$hover-color:                                #f8f8f8;                                        //theme hover color
+
+
+//ACCENT COLOR//
+$accent-color:                               #3498db;                                        //theme accent color
+
+
+//OTHER COLOR//
+$body-color:                                 darken(#fff, .5%);                              //body color
+$white-color:                                #fff;                                           //white color for various use
+$dark-color:                                 #000;                                           //dark color for various use
+
+
+//FONT COLOR
+$font-color:                                 #434343;                                        //default font color
+$font-color-dark:                            #292727;                                        //font color dark
+
+//BORDER COLORS
+$border-light:                               rgb(240, 240, 240);                             //creates a light border around content
+$border-light-dark:                          rgba(203, 203, 198, 0.65);                      //creates a light dark border around content
+$border-dark-primary:                        $dark-color;                                    //creates a solid border based on dark color
+
+
+//BOX SHADOWS
+$box-shadow-full:                            0 0 10px rgba(0, 0, 0, 0.3);                    //full squire box shadow
+$box-shadow-light:                           0 0 1px rgba(0, 0, 0, 0.15);                    //light squire box shadow
+$border-inset:                               0px 0px 0px 1px white inset;                    //shadow for inset effect
+$icon-shadow:                                0 0 5px rgba(0, 0, 0, 0.17);                    //shadow for icon
+
+
+//TEXT SHADOWS
+$text-shadow-light:                          0 1px 1px rgba(0, 0, 0, 0.4);                   //light text-shadow
+
+
+//BACKGROUNDS
+$nav-bg:                                     lighten($primary-color, .5%);                   //nav background
+$nav-active:                                 lighten($hover-color, 1.5%);                    //background for nav hover
+$hover-bg:                                   $hover-color;                                   //background for hover color
+$content-bg:                                 $primary-color;                                 //content background
+
+
+//PRELOADER, POPUP, LOADING ANIMATION
+$preloader-bg:                               $body-color;                                    //pre-loader background
+$popup-bg:                                   $primary-color;                                 //magnific popup background
+
+
+//BREAKPOINT VARIABLES
+$lg:                                         1170px;                                         //large screen
+$md:                                         1024px;                                         //medium screen
+$sm:                                         640px;                                          //small screen
+$xs:                                         480px;                                          //extra small

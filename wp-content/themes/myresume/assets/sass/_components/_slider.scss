@@ -1,0 +1,33 @@
+@import "../_abstracts/variables";
+@import "../_abstracts/theme-mixins";
+
+/*-----------------------------------------------------------------------------
+                               SWIPER SLIDER
+------------------------------------------------------------------------------*/
+.swiper-container {
+
+  //directional css
+  @if ($Direction == 'rtl') {
+    direction: rtl;
+  } @else {
+    direction: ltr;
+  }
+
+  .swiper-pagination {
+    margin-bottom: 0;
+    .swiper-pagination-bullet {
+      width: 18px;
+      height: 18px;
+      display: inline-block;
+      border-radius: 50%;
+      background: transparentize($primary-color, .5);
+      opacity: .5;
+      box-shadow: $box-shadow-light;
+      margin: 5px;
+    }
+    .swiper-pagination-bullet-active {
+      opacity: 1;
+    }
+  }
+}
+

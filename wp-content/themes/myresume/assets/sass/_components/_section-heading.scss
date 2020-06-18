@@ -1,0 +1,41 @@
+@import "../_abstracts/variables";
+@import "../_abstracts/theme-mixins";
+@import "../_abstracts/functions";
+
+/*-----------------------------------------------------------------------------
+                                SECTION HEADINGS
+------------------------------------------------------------------------------*/
+.section-heading {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 45px;
+  color: $font-color-dark;
+  letter-spacing: 2px;
+  h5 {
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  span {
+    background: $accent-color;
+    display: inline-block;
+    padding: 7px;
+    margin-top: auto;
+    position: relative;
+    top: 1px;
+
+    //directional css
+    @if ($Direction == 'rtl') {
+      right: -6px;
+    } @else {
+      left: -6px;
+    }
+  }
+}
+
+/*-----------------------------------------------------------------------------
+                                SECTION HEADINGS PARALLAX
+------------------------------------------------------------------------------*/
+.section-parallax {
+  background-attachment: fixed !important;
+  background-position: 50% 0;
+}

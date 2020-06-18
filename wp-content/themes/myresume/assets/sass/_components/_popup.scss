@@ -1,0 +1,493 @@
+@import "../_abstracts/variables";
+@import "../_abstracts/theme-mixins";
+
+/*-------------------------------------------------------------------------------
+                         MAGNIFIC POPUP CONFIG & ANIMATIONS
+-------------------------------------------------------------------------------*/
+.mfp-bg {
+  background: $popup-bg;
+}
+
+.mfp-ready .mfp-figure {
+  opacity: 0;
+}
+
+.mfp-title {
+
+  //directional css
+  @if ($Direction == 'rtl') {
+    text-align: right;
+    right: 0;
+  } @else {
+    text-align: left;
+    left: 0;
+  }
+
+  line-height: 26px;
+  color: $font-color-dark;
+  text-transform: capitalize;
+  word-wrap: break-word;
+  font-size: 16px;
+  padding: 16px 23px;
+  position: absolute;
+  box-shadow: $box-shadow-light;
+  bottom: 45px;
+  background: $primary-color;
+  small {
+    color: $font-color-dark;
+    text-transform: lowercase;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .mfp-title {
+    bottom: 26px;
+  }
+}
+
+.mfp-arrow-left:after {
+  border-right-color: $primary-color; //rtl may need
+}
+
+.mfp-arrow-right:after {
+  border-left-color: $primary-color; //rtl may need
+}
+
+.mfp-iframe-holder .mfp-close {
+  top: -36px;
+  cursor: pointer;
+  position: absolute;
+  background: $white-color;
+  width: 31px;
+  color: $dark-color;
+  line-height: 0;
+  box-shadow: $box-shadow-light;
+  padding: 1px 0 0;
+  height: 30px;
+  transition: all .7s;
+  text-align: center;
+
+  //directional css
+  @if ($Direction == 'rtl') {
+    left: 0;
+  } @else {
+    right: 0;
+  }
+
+  &:hover {
+    background: $hover-bg;
+  }
+}
+
+.mfp-zoom-in .mfp-figure, .mfp-zoom-in .mfp-iframe-holder .mfp-iframe-scaler {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  -webkit-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+}
+
+.mfp-zoom-in.mfp-bg,
+.mfp-zoom-in .mfp-preloader {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.mfp-zoom-in.mfp-image-loaded .mfp-figure, .mfp-zoom-in.mfp-ready .mfp-iframe-holder .mfp-iframe-scaler {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.mfp-zoom-in.mfp-ready.mfp-bg,
+.mfp-zoom-in.mfp-ready .mfp-preloader {
+  opacity: 0.8;
+}
+
+.mfp-zoom-in.mfp-removing .mfp-figure, .mfp-zoom-in.mfp-removing .mfp-iframe-holder .mfp-iframe-scaler {
+  -webkit-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+  opacity: 0;
+}
+
+.mfp-zoom-in.mfp-removing.mfp-bg,
+.mfp-zoom-in.mfp-removing .mfp-preloader {
+  opacity: 0;
+}
+
+.mfp-iframe-scaler {
+  overflow: visible;
+}
+
+.mfp-zoom-out-cur {
+  cursor: auto;
+}
+
+.mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+  cursor: pointer;
+  position: absolute;
+  width: 36px;
+  color: $font-color-dark;
+  line-height: 0;
+  box-shadow: $box-shadow-light;
+  background: $white-color;
+  margin: 6px;
+  display: block;
+  transition: all .7s;
+  padding: 2px 0 0;
+  height: 36px;
+  text-align: center;
+  top: 40px;
+
+  //directional css
+  @if ($Direction == 'rtl') {
+    left: 0;
+  } @else {
+    right: 0;
+  }
+  &:hover {
+    background: $hover-bg;
+  }
+}
+
+.mfp-preloader {
+  width: 150px;
+  min-width: 0;
+  padding: 4px;
+  top: 49%;
+  background: $hover-bg;
+  color: $font-color;
+  opacity: 0.65;
+  -webkit-animation: pulse 1.2s infinite ease-in-out;
+  animation: pulse 1.2s infinite ease-in-out;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/*popup animations*/
+/* Zoom effect*/
+.mfp-zoom-in {
+
+  /* start state */
+  .mfp-with-anim {
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    transform: scale(0.8);
+  }
+
+  &.mfp-bg {
+    opacity: 0;
+    transition: all 0.3s ease-out;
+  }
+
+  /* animate in */
+  &.mfp-ready {
+    .mfp-with-anim {
+      opacity: 1;
+      transform: scale(1);
+    }
+    &.mfp-bg {
+      opacity: 0.8;
+    }
+  }
+
+  /* animate out */
+  &.mfp-removing {
+
+    .mfp-with-anim {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    &.mfp-bg {
+      opacity: 0;
+    }
+
+  }
+
+}
+
+/* Newspaper effect*/
+.mfp-newspaper {
+
+  /* start state */
+  .mfp-with-anim {
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.5s;
+
+    transform: scale(0) rotate(500deg);
+  }
+
+  &.mfp-bg {
+    opacity: 0;
+    transition: all 0.5s;
+  }
+
+  /* animate in */
+  &.mfp-ready {
+    .mfp-with-anim {
+      opacity: 1;
+      transform: scale(1) rotate(0deg);
+    }
+    &.mfp-bg {
+      opacity: 0.8;
+    }
+  }
+
+  /* animate out */
+  &.mfp-removing {
+
+    .mfp-with-anim {
+      transform: scale(0) rotate(500deg);
+      opacity: 0;
+    }
+    &.mfp-bg {
+      opacity: 0;
+    }
+
+  }
+
+}
+
+/* Move-horizontal effect*/
+.mfp-move-horizontal {
+
+  /* start state */
+  .mfp-with-anim {
+    opacity: 0;
+    transition: all 0.3s;
+
+    transform: translateX(-50px);
+  }
+
+  &.mfp-bg {
+    opacity: 0;
+    transition: all 0.3s;
+  }
+
+  /* animate in */
+  &.mfp-ready {
+    .mfp-with-anim {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    &.mfp-bg {
+      opacity: 0.8;
+    }
+  }
+
+  /* animate out */
+  &.mfp-removing {
+
+    .mfp-with-anim {
+      transform: translateX(50px);
+      opacity: 0;
+    }
+    &.mfp-bg {
+      opacity: 0;
+    }
+
+  }
+
+}
+
+/* Move-from-top effect*/
+.mfp-move-from-top {
+
+  .mfp-content {
+    vertical-align: top;
+  }
+
+  /* start state */
+  .mfp-with-anim {
+    opacity: 0;
+    transition: all 0.2s;
+
+    transform: translateY(-100px);
+  }
+
+  &.mfp-bg {
+    opacity: 0;
+    transition: all 0.2s;
+  }
+
+  /* animate in */
+  &.mfp-ready {
+    .mfp-with-anim {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    &.mfp-bg {
+      opacity: 0.8;
+    }
+  }
+
+  /* animate out */
+  &.mfp-removing {
+
+    .mfp-with-anim {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    &.mfp-bg {
+      opacity: 0;
+    }
+
+  }
+
+}
+
+/* 3d unfold*/
+.mfp-3d-unfold {
+  .mfp-content {
+    perspective: 2000px;
+    overflow: hidden;
+  }
+
+  /* start state */
+  .mfp-with-anim {
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    transform-style: preserve-3d;
+    transform: rotateY(-60deg);
+  }
+
+  &.mfp-bg {
+    opacity: 0;
+    transition: all 0.5s;
+  }
+
+  /* animate in */
+  &.mfp-ready {
+    .mfp-with-anim {
+      opacity: 1;
+      transform: rotateY(0deg);
+    }
+    &.mfp-bg {
+      opacity: 0.8;
+    }
+  }
+
+  /* animate out */
+  &.mfp-removing {
+
+    .mfp-with-anim {
+      transform: rotateY(60deg);
+      opacity: 0;
+    }
+    &.mfp-bg {
+      opacity: 0;
+    }
+
+  }
+
+}
+
+/* Zoom-out effect*/
+.mfp-zoom-out {
+
+  /* start state */
+  .mfp-with-anim {
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.3);
+  }
+
+  &.mfp-bg {
+    opacity: 0;
+    transition: all 0.3s ease-out;
+  }
+
+  /* animate in */
+  &.mfp-ready {
+    .mfp-with-anim {
+      opacity: 1;
+      transform: scale(1);
+    }
+    &.mfp-bg {
+      opacity: 0.8;
+    }
+  }
+
+  /* animate out */
+  &.mfp-removing {
+
+    .mfp-with-anim {
+      transform: scale(1.3);
+      opacity: 0;
+    }
+    &.mfp-bg {
+      opacity: 0;
+    }
+
+  }
+
+}
+
+/* "Hinge" close effect*/
+
+@keyframes hinge {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: top left;
+    animation-timing-function: ease-in-out;
+  }
+  20%, 60% {
+    transform: rotate(80deg);
+    transform-origin: top left;
+    animation-timing-function: ease-in-out;
+  }
+  40% {
+    transform: rotate(60deg);
+    transform-origin: top left;
+    animation-timing-function: ease-in-out;
+  }
+  80% {
+    transform: rotate(60deg) translateY(0);
+    opacity: 1;
+    transform-origin: top left;
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    transform: translateY(700px);
+    opacity: 0;
+  }
+}
+
+.hinge {
+  animation-duration: 1s;
+  animation-name: hinge;
+}
+
+.mfp-with-fade {
+  // before-open state
+  .mfp-content,
+  &.mfp-bg {
+    opacity: 0;
+    transition: opacity .5s ease-out;
+  }
+  // open state
+  &.mfp-ready {
+    .mfp-content {
+      opacity: 1;
+    }
+    &.mfp-bg {
+      opacity: 0.8; // background opacity
+    }
+  }
+
+  // closed state
+  &.mfp-removing {
+    &.mfp-bg {
+      opacity: 0;
+    }
+  }
+}

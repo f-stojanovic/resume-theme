@@ -1,0 +1,94 @@
+@import "../_vendors/bootstrap-sass/assets/stylesheets/bootstrap/mixins/grid";
+@import "../_vendors/bootstrap-sass/assets/stylesheets/bootstrap/mixins/image";
+@import "../_vendors/bootstrap-sass/assets/stylesheets/bootstrap/mixins/clearfix";
+@import "../_abstracts/variables";
+
+/*-----------------------------------------------------------------------------
+                                   MASONRY
+------------------------------------------------------------------------------*/
+
+.filters {
+  text-align: center;
+  margin-bottom: 15px;
+  .btn {
+    background: $content-bg;
+  }
+}
+
+.card-container {
+  padding: 15px;
+  .card {
+    overflow: hidden;
+    position: relative;
+    background: transparentize($accent-color, .1);
+    img {
+      @include img-responsive();
+      transition: all .8s;
+    }
+    .caption-and-link {
+      position: absolute;
+      display: none;
+      transition: all .5s;
+      justify-content: flex-end;
+      align-items: flex-start;
+      flex-direction: column;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 30px;
+      .caption {
+        color: $white-color;
+        h6 {
+          text-transform: uppercase;
+          margin-bottom: -5px;
+          font-weight: 500;
+        }
+      }
+      .links {
+        a {
+          justify-content: center;
+          align-items: center;
+          color: $white-color;
+          text-transform: uppercase;
+          padding: 7px;
+          font-size: 11px;
+          border: 1px solid $border-light;
+          transition: all .5s;
+
+          //directional css
+          @if ($Direction == 'rtl') {
+            margin: 0 0 0 4px;
+          } @else {
+            margin: 0 4px 0 0;
+          }
+
+          &:hover {
+            background: transparent;
+            box-shadow: $border-inset;
+          }
+        }
+      }
+    }
+
+    &:hover {
+      img {
+        opacity: .1;
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+      }
+      .caption-and-link {
+        display: flex;
+        .links a {
+          display: inline-flex;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .card {
+      max-width: 400px;
+      margin: auto;
+    }
+  }
+}

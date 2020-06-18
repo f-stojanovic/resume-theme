@@ -1,0 +1,697 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sole | Portfolio</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!--Place favicon.ico in the root directory-->
+
+    <!--GOOGLE FONT-->
+    <link href="https://fonts.googleapis.com/css?family=Advent+Pro:400,500,600" rel="stylesheet">
+
+    <!--VENDOR STYLESHEET-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!--MAIN STYLESHEET-->
+    <link rel="stylesheet" href="css/application.css">
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+<!--PRE LOADER-->
+<div id="pre-loader" class="loading">
+    <div class="loading-center">
+        <div class="ripple-loader"></div>
+    </div>
+</div>
+
+<!--NAVIGATION-->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand page-scroll" href="#page-top">John Doe | Portfolio</a>
+        </div>
+
+        <!--COLLECT THE NAV LINKS, FORMS, AND OTHER CONTENT FOR TOGGLING-->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <!--HIDDEN LI INCLUDED TO REMOVE ACTIVE CLASS FROM ABOUT LINK WHEN SCROLLED UP PAST ABOUT SECTION-->
+                <li class="hidden">
+                    <a class="page-scroll" href="#page-top"></a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#home">Home</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Portfolio<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="page-scroll" href="#gallery">Gallery</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a class="page-scroll" href="#best-shots">Best Shots</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#hire">Hire Me</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--HEADER-->
+<header id="home"  data-image-bg="img/profile/2.jpg" data-image-overlay="rgba(27, 21, 21, 0.1)">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="home-section">
+                    <div class="text-content dark-theme">
+                        <p>Explore My Works</p>
+                        <h3>Crafted with Love</h3>
+                        <p>John Doe | Portfolio</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<main>
+    <!--GALLERY SECTION-->
+    <section id="gallery" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <h5><span></span>Portfolio Gallery</h5>
+                    </div>
+                    <div class="gallery-section">
+
+                        <div class="filters">
+                            <div class="btn-group" data-toggle="buttons">
+                                <label data-filter="" class="btn active"><input type="radio" name="options"> All</label>
+                                <label data-filter="one" class="btn"><input type="radio" name="options"> Branding</label>
+                                <label data-filter="two" class="btn"><input type="radio" name="options"> Design</label>
+                                <label data-filter="three" class="btn"><input type="radio" name="options"> PSD</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div id="masonry">
+
+                                <div data-filter="one" class="card-container col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                    <div class="card">
+                                        <img src="img/portfolios/1_400x400.jpg" alt="">
+                                        <div class="caption-and-link">
+                                            <div class="caption">
+                                                <h6 class="animated fadeInUp">Lightbox Video</h6>
+                                                <p class="animated fadeInUp delay0-1s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloremque ea impedit.</p>
+                                            </div>
+                                            <div class="links animated fadeInUp delay0-2s">
+                                                <!--VIDEO-->
+                                                <a class="popup-vimeo" href="https://vimeo.com/45830194">Play</a>
+                                                <!--LINK-->
+                                                <a href="#" target="_blank">Link</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div data-filter="two" class="card-container col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                    <div class="card">
+                                        <img src="img/portfolios/6_400x500.jpg" alt="">
+                                        <div class="caption-and-link">
+                                            <div class="caption">
+                                                <h6 class="animated fadeInUp">Lightbox Image</h6>
+                                                <p class="animated fadeInUp delay0-1s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloremque ea impedit.</p>
+                                            </div>
+                                            <div class="links animated fadeInUp delay0-2s">
+                                                <!--IMAGE GALLERY-->
+                                                <a class="gallery-link" role="button">Gallery</a>
+                                                <!--GALLERY-->
+                                                <div class="gallery mfp-hide">
+                                                    <a href="img/portfolios/1.jpg" title="Image Title Goes Here" data-subtitle="Subtitle Goes Here"></a>
+                                                    <a href="img/portfolios/2.jpg" title="Image Title Goes Here" data-subtitle="Subtitle Goes Here"></a>
+                                                    <a href="img/portfolios/3.jpg" title="Image Title Goes Here" data-subtitle="Subtitle Goes Here"></a>
+                                                    <a href="img/portfolios/4.jpg" title="Image Title Goes Here" data-subtitle="Subtitle Goes Here"></a>
+                                                </div>
+                                                <!--LINK-->
+                                                <a class="popup-modal" href="#item-one" data-effect="mfp-zoom-in">More</a>
+                                            </div>
+                                            <!--DESCRIPTION MODAL-->
+                                            <div id="item-one" class="details-modal mfp-with-anim mfp-hide">
+                                                <div class="modal-content">
+
+                                                    <div class="item-image col-md-6">
+                                                        <img class="animated fadeInLeft" src="img/portfolios/6.jpg" alt="Alt">
+                                                    </div>
+
+                                                    <div class="item-description col-md-6">
+                                                        <div class="text-content">
+                                                            <h4 class="title animated fadeInDown delay0-5s">
+                                                                Project Title</h4>
+                                                            <div class="info-list animated fadeIn delay0-7s">
+                                                                <p><strong>Client : </strong>Company Inc.</p>
+                                                                <p><strong>Delivered : </strong>28 September, 2015</p>
+                                                                <p><strong>Type : </strong>Redesign, Branding</p>
+                                                            </div>
+                                                            <p class="animated fadeInDown delay1s">
+                                                                Duis aute irure dolor inreprehenderit in voluptate velit Duis aute irure dolor
+                                                                inreprehenderit in voluptate velit Duis aute irure dolor inreprehenderit
+                                                                in voluptate velit
+                                                            </p>
+                                                            <a href="" class="live-link animated fadeInUp delay1-2s">See live</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div data-filter="three" class="card-container col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                    <div class="card">
+                                        <img src="img/portfolios/2_400x400.jpg" alt="">
+                                        <div class="caption-and-link">
+                                            <div class="caption">
+                                                <h6 class="animated fadeInUp">Lightbox Image</h6>
+                                                <p class="animated fadeInUp delay0-1s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloremque ea impedit.</p>
+                                            </div>
+                                            <div class="links animated fadeInUp delay0-2s">
+                                                <!--SINGLE IMAGE-->
+                                                <a class="popup-image" href="img/portfolios/2.jpg" data-effect="mfp-zoom-in" title="Image Title Goes Here" data-subtitle="Subtitle Goes Here">View</a>
+                                                <!--LINK-->
+                                                <a class="popup-modal" href="#item-two" data-effect="mfp-zoom-in">More</a>
+                                            </div>
+                                            <!--DESCRIPTION MODAL-->
+                                            <div id="item-two" class="details-modal mfp-with-anim mfp-hide">
+                                                <div class="modal-content">
+
+                                                    <div class="item-image col-md-6">
+                                                        <img class="animated fadeInLeft" src="img/portfolios/2.jpg" alt="Alt">
+                                                    </div>
+
+                                                    <div class="item-description col-md-6">
+                                                        <div class="text-content">
+                                                            <h4 class="title animated fadeInDown delay0-5s">
+                                                                Project Title</h4>
+                                                            <div class="info-list animated fadeIn delay0-7s">
+                                                                <p><strong>Client : </strong>Company Inc.</p>
+                                                                <p><strong>Delivered : </strong>28 September, 2015</p>
+                                                                <p><strong>Type : </strong>Redesign, Branding</p>
+                                                            </div>
+                                                            <p class="animated fadeInDown delay1s">
+                                                                Duis aute irure dolor inreprehenderit in voluptate velit Duis aute irure dolor
+                                                                inreprehenderit in voluptate velit Duis aute irure dolor inreprehenderit
+                                                                in voluptate velit
+                                                            </p>
+                                                            <a href="" class="live-link animated fadeInUp delay1-2s">See live</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div data-filter="one" class="card-container col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                    <div class="card">
+                                        <img src="img/portfolios/3_400x400.jpg" alt="">
+                                        <div class="caption-and-link">
+                                            <div class="caption">
+                                                <h6 class="animated fadeInUp">Lightbox Image</h6>
+                                                <p class="animated fadeInUp delay0-1s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloremque ea impedit.</p>
+                                            </div>
+                                            <div class="links animated fadeInUp delay0-2s">
+                                                <!--SINGLE IMAGE-->
+                                                <a class="popup-image" href="img/portfolios/3.jpg" data-effect="mfp-zoom-in" title="Image Title Goes Here" data-subtitle="Subtitle Goes Here">View</a>
+                                                <!--LINK-->
+                                                <a class="popup-modal" href="#item-three" data-effect="mfp-zoom-in">More</a>
+                                            </div>
+                                            <!--DESCRIPTION MODAL-->
+                                            <div id="item-three" class="details-modal mfp-with-anim mfp-hide">
+                                                <div class="modal-content">
+
+                                                    <div class="item-image col-md-6">
+                                                        <img class="animated fadeInLeft" src="img/portfolios/3.jpg" alt="Alt">
+                                                    </div>
+
+                                                    <div class="item-description col-md-6">
+                                                        <div class="text-content">
+                                                            <h4 class="title animated fadeInDown delay0-5s">
+                                                                Project Title</h4>
+                                                            <div class="info-list animated fadeIn delay0-7s">
+                                                                <p><strong>Client : </strong>Company Inc.</p>
+                                                                <p><strong>Delivered : </strong>28 September, 2015</p>
+                                                                <p><strong>Type : </strong>Redesign, Branding</p>
+                                                            </div>
+                                                            <p class="animated fadeInDown delay1s">
+                                                                Duis aute irure dolor inreprehenderit in voluptate velit Duis aute irure dolor
+                                                                inreprehenderit in voluptate velit Duis aute irure dolor inreprehenderit
+                                                                in voluptate velit
+                                                            </p>
+                                                            <a href="" class="live-link animated fadeInUp delay1-2s">See live</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div data-filter="two" class="card-container col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                    <div class="card">
+                                        <img src="img/portfolios/7_400x500.jpg" alt="">
+                                        <div class="caption-and-link">
+                                            <div class="caption">
+                                                <h6 class="animated fadeInUp">Lightbox Image</h6>
+                                                <p class="animated fadeInUp delay0-1s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloremque ea impedit.</p>
+                                            </div>
+                                            <div class="links animated fadeInUp delay0-2s">
+                                                <!--SINGLE IMAGE-->
+                                                <a class="popup-image" href="img/portfolios/7.jpg" data-effect="mfp-zoom-in" title="Image Title Goes Here" data-subtitle="Subtitle Goes Here">View</a>
+                                                <!--LINK-->
+                                                <a class="popup-modal" href="#item-four" data-effect="mfp-zoom-in">More</a>
+                                            </div>
+                                            <!--DESCRIPTION MODAL-->
+                                            <div id="item-four" class="details-modal mfp-with-anim mfp-hide">
+                                                <div class="modal-content">
+
+                                                    <div class="item-image col-md-6">
+                                                        <img class="animated fadeInLeft" src="img/portfolios/7.jpg" alt="Alt">
+                                                    </div>
+
+                                                    <div class="item-description col-md-6">
+                                                        <div class="text-content">
+                                                            <h4 class="title animated fadeInDown delay0-5s">
+                                                                Project Title</h4>
+                                                            <div class="info-list animated fadeIn delay0-7s">
+                                                                <p><strong>Client : </strong>Company Inc.</p>
+                                                                <p><strong>Delivered : </strong>28 September, 2015</p>
+                                                                <p><strong>Type : </strong>Redesign, Branding</p>
+                                                            </div>
+                                                            <p class="animated fadeInDown delay1s">
+                                                                Duis aute irure dolor inreprehenderit in voluptate velit Duis aute irure dolor
+                                                                inreprehenderit in voluptate velit Duis aute irure dolor inreprehenderit
+                                                                in voluptate velit
+                                                            </p>
+                                                            <a href="" class="live-link animated fadeInUp delay1-2s">See live</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div data-filter="three" class="card-container col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                    <div class="card">
+                                        <img src="img/portfolios/8_400x500.jpg" alt="">
+                                        <div class="caption-and-link">
+                                            <div class="caption">
+                                                <h6 class="animated fadeInUp">Lightbox Image</h6>
+                                                <p class="animated fadeInUp delay0-1s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloremque ea impedit.</p>
+                                            </div>
+                                            <div class="links animated fadeInUp delay0-2s">
+                                                <!--SINGLE IMAGE-->
+                                                <a class="popup-image" href="img/portfolios/8.jpg" data-effect="mfp-zoom-in" title="Image Title Goes Here" data-subtitle="Subtitle Goes Here">View</a>
+                                                <!--LINK-->
+                                                <a class="popup-modal" href="#item-five" data-effect="mfp-zoom-in">More</a>
+                                            </div>
+                                            <!--DESCRIPTION MODAL-->
+                                            <div id="item-five" class="details-modal mfp-with-anim mfp-hide">
+                                                <div class="modal-content">
+
+                                                    <div class="item-image col-md-6">
+                                                        <img class="animated fadeInLeft" src="img/portfolios/8.jpg" alt="Alt">
+                                                    </div>
+
+                                                    <div class="item-description col-md-6">
+                                                        <div class="text-content">
+                                                            <h4 class="title animated fadeInDown delay0-5s">
+                                                                Project Title</h4>
+                                                            <div class="info-list animated fadeIn delay0-7s">
+                                                                <p><strong>Client : </strong>Company Inc.</p>
+                                                                <p><strong>Delivered : </strong>28 September, 2015</p>
+                                                                <p><strong>Type : </strong>Redesign, Branding</p>
+                                                            </div>
+                                                            <p class="animated fadeInDown delay1s">
+                                                                Duis aute irure dolor inreprehenderit in voluptate velit Duis aute irure dolor
+                                                                inreprehenderit in voluptate velit Duis aute irure dolor inreprehenderit
+                                                                in voluptate velit
+                                                            </p>
+                                                            <a href="" class="live-link animated fadeInUp delay1-2s">See live</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div data-filter="one" class="card-container col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                    <div class="card">
+                                        <img src="img/portfolios/9_400x500.jpg" alt="">
+                                        <div class="caption-and-link">
+                                            <div class="caption">
+                                                <h6 class="animated fadeInUp">Lightbox Image</h6>
+                                                <p class="animated fadeInUp delay0-1s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloremque ea impedit.</p>
+                                            </div>
+                                            <div class="links animated fadeInUp delay0-2s">
+                                                <!--SINGLE IMAGE-->
+                                                <a class="popup-image" href="img/portfolios/9.jpg" data-effect="mfp-zoom-in" title="Image Title Goes Here" data-subtitle="Subtitle Goes Here">View</a>
+                                                <!--LINK-->
+                                                <a class="popup-modal" href="#item-six" data-effect="mfp-zoom-in">More</a>
+                                            </div>
+                                            <!--DESCRIPTION MODAL-->
+                                            <div id="item-six" class="details-modal mfp-with-anim mfp-hide">
+                                                <div class="modal-content">
+
+                                                    <div class="item-image col-md-6">
+                                                        <img class="animated fadeInLeft" src="img/portfolios/9.jpg" alt="Alt">
+                                                    </div>
+
+                                                    <div class="item-description col-md-6">
+                                                        <div class="text-content">
+                                                            <h4 class="title animated fadeInDown delay0-5s">
+                                                                Project Title</h4>
+                                                            <div class="info-list animated fadeIn delay0-7s">
+                                                                <p><strong>Client : </strong>Company Inc.</p>
+                                                                <p><strong>Delivered : </strong>28 September, 2015</p>
+                                                                <p><strong>Type : </strong>Redesign, Branding</p>
+                                                            </div>
+                                                            <p class="animated fadeInDown delay1s">
+                                                                Duis aute irure dolor inreprehenderit in voluptate velit Duis aute irure dolor
+                                                                inreprehenderit in voluptate velit Duis aute irure dolor inreprehenderit
+                                                                in voluptate velit
+                                                            </p>
+                                                            <a href="" class="live-link animated fadeInUp delay1-2s">See live</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div data-filter="two" class="card-container col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                    <div class="card">
+                                        <img src="img/portfolios/3_400x400.jpg" alt="">
+                                        <div class="caption-and-link">
+                                            <div class="caption">
+                                                <h6 class="animated fadeInUp">Lightbox Image</h6>
+                                                <p class="animated fadeInUp delay0-1s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloremque ea impedit.</p>
+                                            </div>
+                                            <div class="links animated fadeInUp delay0-2s">
+                                                <!--SINGLE IMAGE-->
+                                                <a class="popup-image" href="img/portfolios/4.jpg" data-effect="mfp-zoom-in" title="Image Title Goes Here" data-subtitle="Subtitle Goes Here">View</a>
+                                                <!--LINK-->
+                                                <a class="popup-modal" href="#item-seven" data-effect="mfp-zoom-in">More</a>
+                                            </div>
+                                            <!--DESCRIPTION MODAL-->
+                                            <div id="item-seven" class="details-modal mfp-with-anim mfp-hide">
+                                                <div class="modal-content">
+
+                                                    <div class="item-image col-md-6">
+                                                        <img class="animated fadeInLeft" src="img/portfolios/4.jpg" alt="Alt">
+                                                    </div>
+
+                                                    <div class="item-description col-md-6">
+                                                        <div class="text-content">
+                                                            <h4 class="title animated fadeInDown delay0-5s">
+                                                                Project Title</h4>
+                                                            <div class="info-list animated fadeIn delay0-7s">
+                                                                <p><strong>Client : </strong>Company Inc.</p>
+                                                                <p><strong>Delivered : </strong>28 September, 2015</p>
+                                                                <p><strong>Type : </strong>Redesign, Branding</p>
+                                                            </div>
+                                                            <p class="animated fadeInDown delay1s">
+                                                                Duis aute irure dolor inreprehenderit in voluptate velit Duis aute irure dolor
+                                                                inreprehenderit in voluptate velit Duis aute irure dolor inreprehenderit
+                                                                in voluptate velit
+                                                            </p>
+                                                            <a href="" class="live-link animated fadeInUp delay1-2s">See live</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div data-filter="three" class="card-container col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                    <div class="card">
+                                        <img src="img/portfolios/5_400x300.jpg" alt="">
+                                        <div class="caption-and-link">
+                                            <div class="caption">
+                                                <h6 class="animated fadeInUp">Lightbox Image</h6>
+                                                <p class="animated fadeInUp delay0-1s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloremque ea impedit.</p>
+                                            </div>
+                                            <div class="links animated fadeInUp delay0-2s">
+                                                <!--SINGLE IMAGE-->
+                                                <a class="popup-image" href="img/portfolios/5.jpg" data-effect="mfp-zoom-in" title="Image Title Goes Here" data-subtitle="Subtitle Goes Here">View</a>
+                                                <!--LINK-->
+                                                <a class="popup-modal" href="#item-eight" data-effect="mfp-zoom-in">More</a>
+                                            </div>
+                                            <!--DESCRIPTION MODAL-->
+                                            <div id="item-eight" class="details-modal mfp-with-anim mfp-hide">
+                                                <div class="modal-content">
+
+                                                    <div class="item-image col-md-6">
+                                                        <img class="animated fadeInLeft" src="img/portfolios/5.jpg" alt="Alt">
+                                                    </div>
+
+                                                    <div class="item-description col-md-6">
+                                                        <div class="text-content">
+                                                            <h4 class="title animated fadeInDown delay0-5s">
+                                                                Project Title</h4>
+                                                            <div class="info-list animated fadeIn delay0-7s">
+                                                                <p><strong>Client : </strong>Company Inc.</p>
+                                                                <p><strong>Delivered : </strong>28 September, 2015</p>
+                                                                <p><strong>Type : </strong>Redesign, Branding</p>
+                                                            </div>
+                                                            <p class="animated fadeInDown delay1s">
+                                                                Duis aute irure dolor inreprehenderit in voluptate velit Duis aute irure dolor
+                                                                inreprehenderit in voluptate velit Duis aute irure dolor inreprehenderit
+                                                                in voluptate velit
+                                                            </p>
+                                                            <a href="" class="live-link animated fadeInUp delay1-2s">See live</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--BEST SHOTS SECTION-->
+    <section id="best-shots" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <h5><span></span>BEST SHOTS</h5>
+                    </div>
+                    <div class="best-shots-section">
+                        <div class="row">
+
+                            <div class="shots-block col-md-4">
+                                <div class="shots">
+                                    <div class="preview-image">
+                                        <img src="img/shots/1.jpg" alt="">
+                                        <div class="caption-and-link">
+                                            <div class="caption">
+                                                <h6 class="animated fadeInUp">Featured On Dribble</h6>
+                                            </div>
+                                            <div class="links animated fadeInUp delay0-2s">
+                                                <!--SINGLE IMAGE-->
+                                                <a href="#" target="_blank">50K+ Views</a>
+                                                <!--LINK-->
+                                                <a href="#" target="_blank">Link</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="text-content">
+                                        <h6 class="heading">TripAdvisor Redesign Concept</h6>
+                                        <span class="date">04 <span>December</span><span>2016</span></span>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                            Ad animi aperiam, asperiores aspernatur assumenda corporis
+                                            dolorum enim esse explicabo laborum maxime minima nesciunt
+                                            non odit officia porro quisquam sed sint.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="shots-block col-md-4">
+                                <div class="shots">
+                                    <div class="preview-image">
+                                        <img src="img/shots/2.jpg" alt="">
+                                        <div class="caption-and-link">
+                                            <div class="caption">
+                                                <h6 class="animated fadeInUp">Featured On Dribble</h6>
+                                            </div>
+                                            <div class="links animated fadeInUp delay0-2s">
+                                                <!--SINGLE IMAGE-->
+                                                <a href="#" target="_blank">12K+ Views</a>
+                                                <!--LINK-->
+                                                <a href="#" target="_blank">Link</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-content">
+                                        <h6 class="heading">iPhone 7 Landing Page Concept</h6>
+                                        <span class="date">04 <span>December</span><span>2016</span></span>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                            Ad animi aperiam, asperiores aspernatur assumenda corporis
+                                            dolorum enim esse explicabo laborum maxime minima nesciunt
+                                            non odit officia porro quisquam sed sint.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="shots-block col-md-4">
+                                <div class="shots">
+                                    <div class="preview-image">
+                                        <img src="img/shots/3.jpg" alt="">
+                                        <div class="caption-and-link">
+                                            <div class="caption">
+                                                <h6 class="animated fadeInUp">Featured On Behance</h6>
+                                            </div>
+                                            <div class="links animated fadeInUp delay0-2s">
+                                                <!--SINGLE IMAGE-->
+                                                <a href="#" target="_blank">20K+ Views</a>
+                                                <!--LINK-->
+                                                <a href="#" target="_blank">Link</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-content">
+                                        <h6 class="heading">Skrill Redesign Concept</h6>
+                                        <span class="date">04 <span>December</span><span>2016</span></span>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                            Ad animi aperiam, asperiores aspernatur assumenda corporis
+                                            dolorum enim esse explicabo laborum maxime minima nesciunt
+                                            non odit officia porro quisquam sed sint.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--HIRE SECTION-->
+    <section id="hire" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="hire-section">
+                        <div class="row">
+                            <div class="text-content">
+                                <h5>Liked My Work. Interested in working with me?</h5>
+                                <a href="index-cv.html#contact" target="_blank" class="btn">Contact Me</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!--SCROLL TO TOP-->
+<div id="scroll-up" class="scroll-top animated fadeInUp">
+    <i class="ion-ios-arrow-up"></i>
+</div>
+
+<footer id="footer" class="section">
+    <div class="container">
+        <div class="row">
+
+            <div class="footer-infos col-md-3">
+                <h5>John Doe</h5>
+                <p>Frontend Developer, Dextro Soft, UK</p>
+                <p>Brooklyn, New York</p>
+                <p>john@sole.com</p>
+            </div>
+
+            <div class="footer-infos col-md-3 col-md-push-1">
+                <h5>Text Content</h5>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Aliquam aspernatur, atque deleniti doloribus ducimus earum
+                    enim, esse ex harum impedit.
+                </p>
+            </div>
+
+            <div class="footer-socials col-md-3 col-md-push-3">
+                <h5>Explore</h5>
+                <!--LINKS-->
+                <ul class="site-links">
+                    <li><a href="index-bio.html" target="_blank">Bio</a></li>
+                    <li>| <a href="index-blog-home.html" target="_blank">Blog</a> |</li>
+                    <li><a href="index-cv.html" target="_blank">CV</a></li>
+                </ul>
+                <!--SOCIAL LINKS-->
+                <ul class="col-md-12 social-list">
+                    <li><a href="#" target="_blank"><i class="ion-social-twitter-outline"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="ion-social-facebook-outline"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="ion-social-instagram-outline"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="ion-social-dribbble-outline"></i></a></li>
+                </ul>
+                <p>Copyright &copy; Sole | Portfolio 2016</p>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+<!--SCRIPTS-->
+<script src="js/vendor/jquery-2.2.4.min.js"></script>
+<script src="js/vendor/jquery.easing.min.js"></script>
+<script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/vendor/jquery.magnific-popup.min.js"></script>
+<script src="js/vendor/masonry-3.1.4.js"></script>
+<script src="js/vendor/masonry.filter.js"></script>
+<!--MAIN SCRIPT-->
+<script src="js/main-portfolio.js"></script>
+
+
+</body>
+</html>
