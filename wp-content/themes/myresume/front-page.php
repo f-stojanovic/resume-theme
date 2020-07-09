@@ -65,6 +65,7 @@ Template Name: Home Page
                             ));
                         }
                         ?>
+
                 </li>
             </ul>
         </div>
@@ -157,8 +158,8 @@ Template Name: Home Page
                     <div class="introduction-section">
                         <div class="text-content">
                             <p>
-                             My goal is to become associated with a company where I can utilize and improve my skills
-                                                                                                               and gain more knowledge while enhancing the company’s productivity and reputation.Seek to
+                                My goal is to become associated with a company where I can utilize and improve my skills
+                                and gain more knowledge while enhancing the company’s productivity and reputation.Seek to
                                 work in an environment that will challenge me further; while allowing me to contribute to
                                 the continued growth and success of the organization. Self-confident, meticulous, analytic,
                                 funny and trustworthy are the things that you will find inspiring. Working as a part of any
@@ -277,7 +278,36 @@ Template Name: Home Page
 
 
                                 </div>
-                            </div>
+                            </div
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--SKILLS SECTION-->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <h5><span></span>Tools</h5>
+                    </div>
+                    <div class="skills-section text-center">
+                        <div class="tags">
+
+                            <a href="#">GitLab</a>
+                            <a href="#">Postman</a>
+                            <a href="#">PHP Storm</a>
+                            <a href="#">VSC</a>
+                            <a href="#">Photoshop</a>
+                            <a href="#">Jira</a>
+                            <a href="#">FileZila</a>
+                            <a href="#">GitHub</a>
+                            <a href="#">Composer</a>
+                            <a href="#">Trello</a>
 
                         </div>
                     </div>
@@ -400,7 +430,7 @@ Template Name: Home Page
                                 <div class="text-content">
                                     <p>
                                      “If you want to discover the true character of a person, you have only to observe what they are passionate about.”
-                                                                                                                                                </p>
+                                    </p>
                                 </div>
 
                                 <!--INTEREST TILES-->
@@ -478,43 +508,9 @@ Template Name: Home Page
 
                             <!--CONTACT FORM-->
                             <div class="contact-form col-md-6">
-                                <form id="mail-form" class="form-horizontal">
 
-                                    <div class="form-group">
-                                        <div class="col-sm-12">
-                                            <input type="text" class="form-control" placeholder="Your Name" name="name" required>
-                                        </div>
-                                    </div>
+	                            <?php echo do_shortcode( '[contact-form-7 id="50" title="Contact form 1" html_id="mail-form" html_class="form-horizontal"]' ); ?>
 
-                                    <div class="form-group">
-                                        <div class="col-sm-12">
-                                            <input type="text" class="form-control" placeholder="Subject" name="subject" required>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <div class="col-sm-12">
-                                            <input type="email" class="form-control" placeholder="Your Email" name="email" required>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <div class="col-sm-12">
-                                            <textarea class="form-control" rows="5" placeholder="Your Message" name="message" required></textarea>
-                                        </div>
-                                    </div>
-
-                                    <!--RE-CAPTCHA-->
-                                    <div class="g-recaptcha" data-sitekey="_________________"></div>
-
-                                    <div class="form-group">
-                                        <div class="col-sm-12">
-                                            <button id="send-button" type="submit" name="submit" value="Submit" class="btn">Send</button>
-                                            <p class="message animated fadeInLeft"></p>
-                                        </div>
-                                    </div>
-
-                                </form>
                             </div>
 
                         </div>

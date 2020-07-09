@@ -20,11 +20,13 @@
 				?>
 			</div>
 
-			<div class="footer-infos col-md-3 col-md-push-1" style="padding-top: 50px; padding-left: 60px;">
+			<div class="footer-infos desktopContent col-md-3 col-md-push-1" style="padding-top: 50px; padding-left: 60px;">
 				<p style="text-align: center;"><div class="led-yellow" style="float: left; margin-top: 3px;"></div>
 				<span class="led-yellow-span" style="padding-left: 10px;">Available for freelance.</span>
 				</p>
 			</div>
+
+            <div class="phoneContent"></div>
 
 			<div class="footer-socials col-md-3 col-md-push-3">
 				<h5>Explore</h5>

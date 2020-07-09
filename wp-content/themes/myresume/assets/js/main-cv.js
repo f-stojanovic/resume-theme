@@ -33,6 +33,20 @@
             });
         }
 
+       /* ---------------------------------------------
+       JQUERY FOR CV DOWNLOAD FUNCTION
+       --------------------------------------------- */
+            $('.download').click(function() {
+                var templateUrl = object_name.templatedir;
+                $.ajax({
+                    type: "POST",
+                    url: templateUrl + '/includes/dompdf.php',
+                    success:function(url){
+                        window.open(url);
+                    },
+                })
+            });
+
         /* ---------------------------------------------
          SCROLL TO TOP
          --------------------------------------------- */
@@ -235,9 +249,10 @@
          INITIALIZE MAP
          --------------------------------------------- */
         function initMap() {
-            var myLatLng = {lat: 51.5287352, lng: -0.3817831};
+            var templateUrl = object_name.templatedir;
+            var myLatLng = {lat: 44.794240, lng: 20.497280};
             var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 16,
+                zoom: 15,
                 center: myLatLng,
                 styles: styles
             });
@@ -245,7 +260,7 @@
             var marker = new google.maps.Marker({
                 position: myLatLng,
                 map: map,
-                icon: 'img/svg/map-marker.svg',
+                icon: templateUrl + '/assets/img/svg/map-marker.svg', // Form script
                 title: 'Location!'
             });
         }
@@ -255,6 +270,8 @@
          INIT MAIL
          --------------------------------------------- */
         function initMail() {
+
+            var templateUrl = object_name.templatedir;
             var mailForm = 'form#mail-form';
             var sendButton = '#send-button';
             $('.message').hide();
@@ -277,7 +294,7 @@
                 else {
                     $.ajax({
                         type: 'POST',
-                        url: 'php/mail_handler.php', // Form script
+                        url: templateUrl + '/assets/php/mail_handler.php', // Form script
                         data: post_data
                     })
                         .done(function () {
@@ -296,7 +313,6 @@
                 }
             });
         }
-
 
         /* ---------------------------------------------
          BLOG HOME MASONRY
@@ -490,7 +506,6 @@
         testimonialSliderInit();
         initMail();
 
-
         /***ON-LOAD***/
         jQuery(window).on('load', function () {
 
@@ -543,6 +558,5 @@ let mouse = { x: 0, y: 0 }; //Cursor position
             TweenLite.set(ball, { x: pos.x, y: pos.y });
         }
     }
-
 
 

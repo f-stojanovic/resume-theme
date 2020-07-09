@@ -3505,4 +3505,13 @@ html css mobile media-queries mobile-devices
       50% { background-color: #228B22; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #008000 0 -1px 9px, #32CD32 0 2px 0; }
       to { background-color: #32CD32; }
   }
-  
+
+@media all and (min-width: 480px) {
+    .desktopContent {display:block;}
+    .phoneContent {display:none;}
+}
+
+@media all and (max-width: 479px) {
+    .desktopContent {display:none;}
+    .phoneContent {display:block;}
+}

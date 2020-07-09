@@ -100,6 +100,11 @@ function ju_enqueue() {
 		array(), false, true
 	);
 
+	wp_register_script( 'my-url-script',
+		'myscript_url'
+	);
+	$translation_array = array( 'templatedir' => get_template_directory_uri() );
+
 	wp_enqueue_script('jquery');
 	wp_enqueue_script('ju_easing');
 	wp_enqueue_script('ju_bootstrap');
@@ -110,5 +115,10 @@ function ju_enqueue() {
 	wp_enqueue_script('ju_countto');
 	wp_enqueue_script('ju_map');
 	wp_enqueue_script('ju_main');
+	wp_enqueue_script( 'my-url-script' );
+
+	wp_localize_script( 'my-url-script', 'object_name', $translation_array );
+
+
 
 }
